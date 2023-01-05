@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="{{url_for('static', filename='styles/main.css')}}">
+</head>
+<body>
+    <div class="statistics">
+        <h1>STATISTICS PAGE</h1>
+        <h3>Time Polarities</h3>
+        <form method="get" action="/time-polarities">
+            <input type="submit" value="SHOW TIME POLARITIES" name="show_time_polarities"/>
+        </form>
+        <h3>Hour Polarities</h3>
+        <form method="get" action="/hour-polarities">
+            <input type="submit" value="SHOW HOUR POLARITIES" name="show_hour_polarities"/>
+        </form>
+        <div class="buttons" style="margin-top: 20px">
+            <a href="/"><input type="button" style="font-size:medium" value="MAIN MENU"></a>
+        </div>
+    </div>
+</body>
+</html>

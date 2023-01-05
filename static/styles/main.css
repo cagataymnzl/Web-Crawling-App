@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-image: url(/static/images/background.jpeg);
+    background-size: 130%;
+}
+
+.bigger_picture {
+    margin-left: 50px;
+    text-align: center;
+    padding-top: 10px;
+    /* Location of the box */
+    color: white;
+    margin-top: 20px;
+    /* 15% from the top and centered */
+    padding: 20px;
+    width: 400px;
+    /* Could be more or less, depending on screen size */
+    height: 100%;
+    overflow-y: auto;
+    border: 3px solid white;
+    border-radius: 10%;
+}
+
+.cloud {
+    text-align: center;
+    padding-top: 10px;
+    /* Location of the box */
+    color: white;
+    margin-top: 50px;
+    /* 15% from the top and centered */
+    padding: 20px;
+    width: 600px;
+    /* Could be more or less, depending on screen size */
+    height: 100%;
+    overflow-y: auto;
+    border: 3px solid white;
+    border-radius: 10%;
+}
+
+.statistics {
+    margin-left: 50px;
+    text-align: center;
+    padding-top: 10px;
+    /* Location of the box */
+    color: white;
+    margin-top: 240px;
+    /* 15% from the top and centered */
+    padding: 20px;
+    width: 500px;
+    /* Could be more or less, depending on screen size */
+    height: 100%;
+    overflow-y: auto;
+    border: 3px solid white;
+    border-radius: 10%;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.about {
+    border: 2px solid white;
+    border-radius: 10%;
+}
+
+.modeling {
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 10%;
+    padding-bottom: 40px;
+}
+
+.output {
+    display: contents;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 20%;
+    padding-bottom: 40px;
+    width: 600px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css')}}">
+
+</head>
+
+<body>
+    <div class="bigger_picture">
+        <!--
+            <h1>NEWS TOPIC MODELLER</h1>
+            <form action="/" class="" method="post">
+                <input type="file" id="my-file" name="csvfile" value="">
+            <input type="submit" name="" value="Upload">
+        </form>
+        -->
+        <h1>NEWS TOPIC MODELLER</h1>
+        <form action="/">
+            <label for="datasets">Choose a dataset:</label>
+            <select name="datasets" id="datasets">
+                <option value="news-week-18aug24.csv">news-week-18aug24.csv</option>
+                <option value="news-week-18aug24-mini.csv">news-week-18aug24-mini.csv</option>
+                <option value="news-week-17aug24.csv">news-week-17aug24.csv</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Upload">
+        </form>
+        <br>
+        <div class="about">
+            <h3>ABOUT THE DATASET</h3>
+            <div class="buttons">
+                <a href="/show-top-10-feeds"><input type="button" value="SHOW TOP 10 FEEDS"></a><br>
+                <a href="/show-top-10-languages"><input type="button" value="SHOW TOP 10 LANGUAGES"></a><br>
+                <a href="/cloud"><input type="button" value="SHOW WORD CLOUD"></a><br><br>
+            </div>
+            <div class="images">
+                <img src="/static/images/ytulogo.png" width="120px" alt="YTU Logo">
+            </div>
+        </div>
+        <div class="modeling">
+            <h3>TOPIC MODELLING</h3>
+            <div>
+                <form>
+                    Number of Features:
+                    <input type="number" name="no_of_features" min="500" max="2000" required="required" /><br>
+                    Number of Topics:
+                    <input type="number" name="no_of_topics" min="1" max="10" required="required" /><br>
+                    Number of Top Words:
+                    <input type="number" name="no_of_top_words" min="1" max="10" required="required" /><br><br>
+                    <button type="submit" formaction="{{ url_for('nmf')}}" formmethod="post">Display Topics NMF</button>
+                    <button type="submit" formaction="{{ url_for('lda')}}" formmethod="post">Display Topics LDA</button>
+                </form>
+                <br>
+                <form action="{{ url_for('statistics')}}" method="get">
+                    <button type="submit">Show Statistics Page</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
